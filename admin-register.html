@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+    <link rel="icon" type="image/x-icon" href="img\logo.png">
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="icon" type="image/x-icon" href="D:\Web\Supply-chain\vector\logo.png">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/c02a6b848d.js" crossorigin="anonymous"></script>
+    <title>Admin Registration</title>
+    <style type="text/css">
+        body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: white;
+}
+        h1 {
+ font-size: 32px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin-top: 0px;
+    padding-top: 0px;
+    border-bottom: black solid 2px;
+
+}
+        .col-sm-6 {
+    width: 100%;
+    /* float: inherit; */
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+#form-1 {
+        width: 50%;
+    /* float: inherit; */
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+#form-1 {
+    width: 100%;
+    /* float: inherit; */
+    background-color: white;
+    padding: 40px;
+    /* border-radius: 10px; */
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+}
+}
+@media screen and (max-width: 425px) {
+  #form-1 {
+    width: 100%;
+    /* float: inherit; */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+}
+}
+@media screen and (min-width: 425px) {
+  #form-1 {
+    width: 100%;
+    /* float: inherit; */
+    background-color: white;
+    padding: 20px;
+     /* border-radius: 10px;*/
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+}
+}
+@media screen and (min-width: 768px) {
+ #form-1 {
+    width: 60%;
+    /* float: inherit; */
+    background-color: white;
+    padding: 40px;
+    /* border-radius: 10px;*/
+    display: flex;
+    align-content: center;
+    /* align-items: center; */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    flex-direction: column;
+}
+}
+#row-1 {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+@media screen and (min-width: 425px) {
+#row-1 {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+}
+@media screen and (min-width: 375px) {
+#row-1 {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+}
+@media screen and (min-width: 768px) {
+#row-1 {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+}
+
+#img {
+    width: 40%;
+    /* float: inherit; */
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+        background-color: #b7b7b7;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+@media screen and (min-width: 425px) {
+ #img {
+    width: 40%;
+    /* float: inherit; */
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+        background-color: white;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+}
+@media screen and (max-width: 425px) {
+ #img {
+    width: 100%;
+    /* float: inherit; */
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+        background-color: white;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+}
+@media screen and (max-width: 786px) {
+ #img {
+    width: 100%;
+    /* float: inherit; */
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+        flex-direction: column;
+        background-color: white;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+}
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+.btn-success {
+    color: #fff;
+    background-color: #007cff;
+    border-color: #4cae4c;
+    width: 100%;
+}
+form#registration_form {
+    width: 100%;
+}
+/*sidenav*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 20px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+/*  padding: 16px;*/
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+#active {
+  color : white;
+}
+#logout{
+    color:red;
+    font-weight: 600;
+}
+h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+@media only screen and (max-width: 450px){
+h4 {
+    font-size: 12px;
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+}
+@media only screen and (max-width: 450px){
+h4 {
+    font-size: 12px;
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+}
+@media only screen and (max-width: 800px){
+h4 {
+    font-size: 12px;
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+}
+@media only screen and (min-width: 1080px){
+h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 0px;
+    align-items: center;
+    justify-content: center;
+}
+}
+h3 {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #939393;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    color: #0089ff;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+@media only screen and (max-width: 450px){
+a {
+    color: #0089ff;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+}
+@media only screen and (max-width: 800px){
+a {
+    color: #0089ff;
+    font-size: 14px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+}
+@media only screen and (min-width: 1080px){
+a {
+    color: #0089ff;
+    font-size: 18px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+}
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-left: auto;
+}
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6">
+
+    </div>
+</div>
+</div>
+<br>
+ <div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="D:\Web\Supply-chain\Main-Dashboard.html"><i class="fas fa-tachometer-alt"></i>&nbsp Dashboard</a>
+  <a href="D:\Web\Supply-chain\Admin-Panel.html"><i class="fas fa-toolbox"></i>&nbsp Admin Panel</a>
+ <a href="file:///D:/Web/Supply-chain/display-table.html"><i class="fas fa-table"></i>&nbsp All Products</a>
+  <a href="D:\Web\Supply-chain\login\dr-register.html"><i class="fas fa-truck"></i>&nbsp Add Driver</a>
+  <a href="D:\Web\Supply-chain\login\admin-register.html"><i class="fas fa-users-cog"></i>&nbsp Add Admin</a>
+  <a href="file:///D:/Web/Supply-chain/admin-login.html" id="logout"><i class="fas fa-sign-out-alt fa-flip-horizontal"></i>&nbsp Logout</a>
+</div>
+<div class="container" >    
+           <div id="main">
+  <!-- <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Dashboard</span> -->
+  
+</div>
+     <div class="row" id="row-1" >
+
+        <div class="col-sm-6" id="img">
+            <img src="D:\Web\Supply-chain\vector\admin-register.png" alt="Girl in a jacket" style="width: 80%;">
+        </div>
+  
+    <div class="col-sm-6" id="form-1">
+        <form name="registration_form" id="registration_form" method="post" action="#" enctype="multipart/form-data" >
+ <h1>Admin Registration</h1>
+        <div class="form-group">
+            <label for="name">Name</label>
+          <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name">
+          <br>
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" class="form-control" placeholder="example@gmail.com">
+        </div>
+
+        <div class="form-group">
+          <label for="password" >Password</label>
+          <input type="password" name="password" id="password" class="form-control"  placeholder="Enter your password">
+        </div>
+        <button type="button" id="register" name="register" class="btn btn-success">Register Now</button>
+         <!-- <h3>OR</h3> -->
+             <h4>Already have an account <a href="/admin-login.html"> Login Here</a></h4>
+    </div><!-- end col -->
+    </form>
+
+    
+  </div><!--  end row -->       
+  </form>
+</div>
+
+</body>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+      import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+    apiKey: "AIzaSyARD5qlx6vek67gDN0ySZAJbImt6PLrP2U",
+    authDomain: "admin-db-66823.firebaseapp.com",
+    projectId: "admin-db-66823",
+    storageBucket: "admin-db-66823.appspot.com",
+    messagingSenderId: "45329655506",
+    appId: "1:45329655506:web:005e5f05052669e898ef0b",
+    measurementId: "G-6G0BN1L6DY"
+  };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+      const auth = getAuth();
+      console.log(app);
+
+      
+
+      //----- New Registration code start     
+      document.getElementById("register").addEventListener("click", function() {
+          var email =  document.getElementById("email").value;
+          var password = document.getElementById("password").value;
+          //For new registration
+          createUserWithEmailAndPassword(auth, email, password)
+          .then((userCredential) => {
+            // Signed in 
+            const user = userCredential.user;
+            console.log(user);
+            location.replace("admin-login.html")
+            alert("Registration successfully!!");
+            
+            // ...
+          })
+          .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ..
+            console.log(errorMessage);
+            alert(error);
+          });                 
+      });
+      //----- End
+ 
+
+      //----- Logout code start   
+      document.getElementById("logout").addEventListener("click", function() {
+          signOut(auth).then(() => {
+              // Sign-out successful.
+              console.log('Sign-out successful.');
+              alert('Sign-out successful.');
+              document.getElementById('logout').style.display = 'none';
+            }).catch((error) => {
+              // An error happened.
+              console.log('An error happened.');
+            });               
+      });
+      //----- End
+    </script>
+     <script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "230px";
+  document.getElementById("main").style.marginLeft = "178px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>
+</html>

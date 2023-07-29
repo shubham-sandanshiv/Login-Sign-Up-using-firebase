@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" ></script>
+  <link rel="icon" type="image/x-icon" href="img\logo.png">
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<title>Admin Login</title>
+	<style type="text/css">
+		body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+    background-color: white;
+}
+
+#row-1 {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: 20px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+@media screen and (min-width: 425px) {
+#row-1 {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+}
+@media screen and (min-width: 375px) {
+#row-1 {
+    margin-right: 15px;
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+}
+@media screen and (min-width: 425px) {
+#row-1 {
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 20px;
+    display: flex;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+}
+@media screen and (min-width: 768px) {
+#row-1 {
+    margin-right: -15px;
+    margin-left: -15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: center;
+}
+}
+
+		h1 {
+ font-size: 32px;
+    background-color: white;
+    color: black;
+    padding: 15px;
+    margin-top: 40px;
+    padding-top: 0px;
+    border-bottom: black solid 2px;
+
+}
+#img{
+	
+	display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 20px;
+    flex-direction: row;
+        background-color: white;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.btn-success {
+    color: #fff;
+    background-color: #007cff;
+    border-color: #4cae4c;
+    width: 100%;
+}
+.register{
+	align-items: center;
+}
+h4 {
+    font-size: 16px;
+    margin-top: 10px;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+}
+h3 {
+    font-size: 14px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #939393;
+    display: flex;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    color: #0089ff;
+    font-size: 18px;
+    margin-left: 5px;
+    text-decoration: none;
+}
+	</style>
+
+</head>
+<body>
+
+<div class="container" >	
+	 <div class="row" id="row-1" >
+	 	<div class="col-sm-6" id="img">
+	 		<img src="D:\Web\Supply-chain\vector\admin-login.png" alt="Girl in a jacket" style="width: 60%;">
+
+		</div>
+	
+	<div class="col-sm-6">
+		<form name="login_form" id="login_form" method="post" action="#" enctype="multipart/form-data" >
+			<h1>Admin Login</h1>
+			<br>
+		<div class="form-group">
+	      <label for="email">Email</label>
+		  <input type="text" name="login_email" id="login_email" class="form-control" placeholder="example@gmail.com">
+		</div>
+		<br>
+		<div class="form-group">
+	      <label for="password">Password</label>
+		  <input type="password" name="login_password" id="login_password" class="form-control"  placeholder="Enter your password">
+		</div>
+		<br>
+		<button type="button" id="login" name="login" class="btn btn-success">Login</button>
+			 <h3>OR</h3>
+		     <h4>Not have an account <a href="file:///D:/Web/Supply-chain/publish/admin-register.html">Sign Up Here</a></h4>
+	
+		<!-- <button type="button" id="register" name="register" class="btn btn-success">Register</button> -->
+
+	</div><!-- end col -->
+	
+  </div><!--  end row -->		
+  </form>
+</div>
+
+</body>
+	<script type="module">
+	  // Import the functions you need from the SDKs you need
+	  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-app.js";
+	  import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-analytics.js";
+	  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js";
+
+	  // Your web app's Firebase configuration
+	  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+    apiKey: "AIzaSyARD5qlx6vek67gDN0ySZAJbImt6PLrP2U",
+    authDomain: "admin-db-66823.firebaseapp.com",
+    projectId: "admin-db-66823",
+    storageBucket: "admin-db-66823.appspot.com",
+    messagingSenderId: "45329655506",
+    appId: "1:45329655506:web:005e5f05052669e898ef0b",
+    measurementId: "G-6G0BN1L6DY"
+  };
+
+	  // Initialize Firebase
+	  const app = initializeApp(firebaseConfig);
+	  const analytics = getAnalytics(app);
+	  const auth = getAuth();
+	  console.log(app);
+
+	  
+	  //----- Login code start	  
+	  document.getElementById("login").addEventListener("click", function() {
+		  var email =  document.getElementById("login_email").value;
+		  var password = document.getElementById("login_password").value;
+
+		  signInWithEmailAndPassword(auth, email, password)
+		  .then((userCredential) => {
+		    // Signed in 
+		    const user = userCredential.user;
+		    console.log(user);
+		     location.replace("Main-Dashboard.html")
+		  
+		    
+		    // ...
+		  })
+		  .catch((error) => {
+		    const errorCode = error.code;
+		    const errorMessage = error.message;
+		    console.log(errorMessage);
+		    alert(errorMessage);
+		  });		  		  
+	  });
+	  //----- End
+
+	  //----- Logout code start	  
+	  document.getElementById("logout").addEventListener("click", function() {
+		  signOut(auth).then(() => {
+			  // Sign-out successful.
+			  console.log('Sign-out successful.');
+			  alert('Sign-out successful.');
+			  document.getElementById('logout').style.display = 'none';
+			}).catch((error) => {
+			  // An error happened.
+			  console.log('An error happened.');
+			});		  		  
+	  });
+	  //----- End
+
+	</script>
+</html>
